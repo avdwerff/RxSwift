@@ -17,6 +17,18 @@
 		07E300071B14995F00F00100 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E300061B14995F00F00100 /* TableViewController.swift */; };
 		07E300091B149A2A00F00100 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E300081B149A2A00F00100 /* User.swift */; };
 		07E3C2331B03605B0010338D /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E3C2321B03605B0010338D /* Dependencies.swift */; };
+		49E22D881BEB3B1000706535 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E22D821BEB3B1000706535 /* AppDelegate.swift */; };
+		49E22D891BEB3B1000706535 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49E22D831BEB3B1000706535 /* Assets.xcassets */; };
+		49E22D8A1BEB3B1000706535 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E22D841BEB3B1000706535 /* Main.storyboard */; };
+		49E22D8B1BEB3B1000706535 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E22D861BEB3B1000706535 /* Info.plist */; };
+		49E22D8F1BEB415900706535 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E22D8E1BEB415900706535 /* RootViewController.swift */; };
+		49E22D901BEB415900706535 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E22D8E1BEB415900706535 /* RootViewController.swift */; };
+		49E22D921BEB422300706535 /* SearchTheMovieDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E22D911BEB422300706535 /* SearchTheMovieDB.swift */; };
+		49E22D941BEB42FA00706535 /* TMDBAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E22D931BEB42FA00706535 /* TMDBAPI.swift */; };
+		49E22D951BEB439B00706535 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81B3A111BC1C28400EF5A9F /* RxBlocking.framework */; };
+		49E22D961BEB439B00706535 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81B3A091BC1C28400EF5A9F /* RxCocoa.framework */; };
+		49E22D971BEB439B00706535 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81B3A011BC1C28400EF5A9F /* RxSwift.framework */; };
+		49E22D991BEB470900706535 /* TMDbSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E22D981BEB470900706535 /* TMDbSearchResultsViewController.swift */; };
 		B1604CB51BE49F8D002E1279 /* DownloadableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1604CB41BE49F8D002E1279 /* DownloadableImage.swift */; };
 		B1604CC21BE5B895002E1279 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F3BE11BDB2E8F000AAC79 /* ReachabilityService.swift */; };
 		B1604CC31BE5B8BD002E1279 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F3BE11BDB2E8F000AAC79 /* ReachabilityService.swift */; };
@@ -65,7 +77,6 @@
 		C8297E331B6CF905000589EA /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859B9AB1B45CF9100D012D7 /* NumberCell.swift */; };
 		C8297E341B6CF905000589EA /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0706E19A1B17361100BA2D3A /* UIImageView+Extensions.swift */; };
 		C8297E351B6CF905000589EA /* NumberSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859B9AD1B45CFAB00D012D7 /* NumberSectionView.swift */; };
-		C8297E361B6CF905000589EA /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF92E21B0B32DA009BCF9A /* RootViewController.swift */; };
 		C8297E371B6CF905000589EA /* RxCollectionViewSectionedDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859B9A71B45C83700D012D7 /* RxCollectionViewSectionedDataSource.swift */; };
 		C8297E381B6CF905000589EA /* Changeset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88C788E1B3F14FD0061C5AB /* Changeset.swift */; };
 		C8297E391B6CF905000589EA /* CollectionViewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C46DA31B47F7110020D71E /* CollectionViewImageCell.swift */; };
@@ -337,7 +348,6 @@
 		C8DF92DF1B0B328B009BCF9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF92DE1B0B328B009BCF9A /* AppDelegate.swift */; };
 		C8DF92E31B0B32DA009BCF9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8DF92E01B0B32DA009BCF9A /* LaunchScreen.xib */; };
 		C8DF92E41B0B32DA009BCF9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DF92E11B0B32DA009BCF9A /* Main.storyboard */; };
-		C8DF92E51B0B32DA009BCF9A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DF92E21B0B32DA009BCF9A /* RootViewController.swift */; };
 		C8DF92E71B0B32F2009BCF9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8DF92E61B0B32F2009BCF9A /* Main.storyboard */; };
 		C8DF92EA1B0B38C0009BCF9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DF92E91B0B38C0009BCF9A /* Images.xcassets */; };
 		C8DF92EB1B0B38C0009BCF9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8DF92E91B0B38C0009BCF9A /* Images.xcassets */; };
@@ -482,6 +492,15 @@
 		07E300061B14995F00F00100 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		07E300081B149A2A00F00100 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		07E3C2321B03605B0010338D /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dependencies.swift; path = Examples/Dependencies.swift; sourceTree = "<group>"; };
+		49E22D651BEB3A9800706535 /* RxExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49E22D821BEB3B1000706535 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49E22D831BEB3B1000706535 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49E22D851BEB3B1000706535 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49E22D861BEB3B1000706535 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49E22D8E1BEB415900706535 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		49E22D911BEB422300706535 /* SearchTheMovieDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTheMovieDB.swift; sourceTree = "<group>"; };
+		49E22D931BEB42FA00706535 /* TMDBAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDBAPI.swift; sourceTree = "<group>"; };
+		49E22D981BEB470900706535 /* TMDbSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDbSearchResultsViewController.swift; sourceTree = "<group>"; };
 		B1604CB41BE49F8D002E1279 /* DownloadableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadableImage.swift; sourceTree = "<group>"; };
 		B1604CC81BE5BBFA002E1279 /* UIImageView+DownloadableImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadableImage.swift"; sourceTree = "<group>"; };
 		B18F3BBB1BD92EC8000AAC79 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -727,7 +746,6 @@
 		C8DF92DE1B0B328B009BCF9A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8DF92E01B0B32DA009BCF9A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C8DF92E11B0B32DA009BCF9A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		C8DF92E21B0B32DA009BCF9A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C8DF92E61B0B32F2009BCF9A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C8DF92E91B0B38C0009BCF9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8DF92F01B0B3E67009BCF9A /* Info-OSX.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
@@ -740,6 +758,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		49E22D621BEB3A9800706535 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E22D951BEB439B00706535 /* RxBlocking.framework in Frameworks */,
+				49E22D961BEB439B00706535 /* RxCocoa.framework in Frameworks */,
+				49E22D971BEB439B00706535 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C8297E591B6CF905000589EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -826,6 +854,28 @@
 			path = TableView;
 			sourceTree = "<group>";
 		};
+		49E22D811BEB3B1000706535 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				49E22D821BEB3B1000706535 /* AppDelegate.swift */,
+				49E22D831BEB3B1000706535 /* Assets.xcassets */,
+				49E22D841BEB3B1000706535 /* Main.storyboard */,
+				49E22D861BEB3B1000706535 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		49E22D8D1BEB408A00706535 /* 09 TMDBSearch */ = {
+			isa = PBXGroup;
+			children = (
+				49E22D911BEB422300706535 /* SearchTheMovieDB.swift */,
+				49E22D931BEB42FA00706535 /* TMDBAPI.swift */,
+				49E22D981BEB470900706535 /* TMDbSearchResultsViewController.swift */,
+			);
+			name = "09 TMDBSearch";
+			path = TMDBSearch;
+			sourceTree = "<group>";
+		};
 		C80DDEC11BCE9041006A1832 /* Driver */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +930,7 @@
 				C83366DD1AD0293800C668A7 /* RxExample-iOS.app */,
 				C88BB8DC1B07E6C90064D411 /* RxExample.app */,
 				C8297E691B6CF905000589EA /* RxExample-iOS-no-module.app */,
+				49E22D651BEB3A9800706535 /* RxExample-tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -895,6 +946,7 @@
 				C833670F1AD029AE00C668A7 /* Example.swift */,
 				C8DF92D11B0B2F8C009BCF9A /* OSX */,
 				C8DF92C71B0B2F84009BCF9A /* iOS */,
+				49E22D811BEB3B1000706535 /* tvOS */,
 				C83366E01AD0293800C668A7 /* Supporting Files */,
 			);
 			path = RxExample;
@@ -958,6 +1010,7 @@
 				07A5C3D91B70B6B8001EFE5C /* 06 Calculator */,
 				C859B9A21B45C5D900D012D7 /* 07 PartialUpdates */,
 				EC91FB931BBA12E800973245 /* 08 AutoLoading */,
+				49E22D8D1BEB408A00706535 /* 09 TMDBSearch */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -1394,9 +1447,9 @@
 		C8DF92C71B0B2F84009BCF9A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				49E22D8E1BEB415900706535 /* RootViewController.swift */,
 				C8DF92E01B0B32DA009BCF9A /* LaunchScreen.xib */,
 				C8DF92E11B0B32DA009BCF9A /* Main.storyboard */,
-				C8DF92E21B0B32DA009BCF9A /* RootViewController.swift */,
 				C8DF92C81B0B2F84009BCF9A /* AppDelegate.swift */,
 			);
 			path = iOS;
@@ -1433,6 +1486,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		49E22D641BEB3A9800706535 /* RxExample-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49E22D801BEB3A9800706535 /* Build configuration list for PBXNativeTarget "RxExample-tvOS" */;
+			buildPhases = (
+				49E22D611BEB3A9800706535 /* Sources */,
+				49E22D621BEB3A9800706535 /* Frameworks */,
+				49E22D631BEB3A9800706535 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RxExample-tvOS";
+			productName = "RxExample-tvOS";
+			productReference = 49E22D651BEB3A9800706535 /* RxExample-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		C8297E2D1B6CF905000589EA /* RxExample-iOS-no-module */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8297E651B6CF905000589EA /* Build configuration list for PBXNativeTarget "RxExample-iOS-no-module" */;
@@ -1493,10 +1563,13 @@
 		C83366D51AD0293800C668A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Krunoslav Zaher";
 				TargetAttributes = {
+					49E22D641BEB3A9800706535 = {
+						CreatedOnToolsVersion = 7.1;
+					};
 					C83366DC1AD0293800C668A7 = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -1524,6 +1597,7 @@
 				C83366DC1AD0293800C668A7 /* RxExample-iOS */,
 				C88BB8B91B07E6C90064D411 /* RxExample-OSX */,
 				C8297E2D1B6CF905000589EA /* RxExample-iOS-no-module */,
+				49E22D641BEB3A9800706535 /* RxExample-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1616,6 +1690,16 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		49E22D631BEB3A9800706535 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E22D891BEB3B1000706535 /* Assets.xcassets in Resources */,
+				49E22D8A1BEB3B1000706535 /* Main.storyboard in Resources */,
+				49E22D8B1BEB3B1000706535 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C8297E5C1B6CF905000589EA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1658,6 +1742,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		49E22D611BEB3A9800706535 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E22D921BEB422300706535 /* SearchTheMovieDB.swift in Sources */,
+				49E22D941BEB42FA00706535 /* TMDBAPI.swift in Sources */,
+				49E22D991BEB470900706535 /* TMDbSearchResultsViewController.swift in Sources */,
+				49E22D881BEB3B1000706535 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C8297E2E1B6CF905000589EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1716,9 +1811,9 @@
 				C89464D11BC6C2B00055219D /* Merge.swift in Sources */,
 				C89464A71BC6C2B00055219D /* BinaryDisposable.swift in Sources */,
 				C89465741BC6C2BC0055219D /* DeinitAction.swift in Sources */,
-				C8297E361B6CF905000589EA /* RootViewController.swift in Sources */,
 				C89464BB1BC6C2B00055219D /* AnonymousObservable.swift in Sources */,
 				C89465991BC6C2BC0055219D /* UISegmentedControl+Rx.swift in Sources */,
+				49E22D901BEB415900706535 /* RootViewController.swift in Sources */,
 				C8297E371B6CF905000589EA /* RxCollectionViewSectionedDataSource.swift in Sources */,
 				B1B7C3D01BE006870076934E /* TakeLast.swift in Sources */,
 				C89464CD1BC6C2B00055219D /* FlatMap.swift in Sources */,
@@ -1911,7 +2006,6 @@
 				C84B913C1B8A282000C9CCCF /* RxCollectionViewSectionedDataSource.swift in Sources */,
 				0706E19B1B17361100BA2D3A /* UIImageView+Extensions.swift in Sources */,
 				C859B9AE1B45CFAB00D012D7 /* NumberSectionView.swift in Sources */,
-				C8DF92E51B0B32DA009BCF9A /* RootViewController.swift in Sources */,
 				C88C788F1B3F14FD0061C5AB /* Changeset.swift in Sources */,
 				C8C46DA81B47F7110020D71E /* CollectionViewImageCell.swift in Sources */,
 				C8C46DAC1B47F7110020D71E /* WikipediaSearchViewController.swift in Sources */,
@@ -1939,6 +2033,7 @@
 				C890A65D1AEC084100AFF7E6 /* ViewController.swift in Sources */,
 				C88C78951B3F20DB0061C5AB /* Differentiator.swift in Sources */,
 				C8C46DAA1B47F7110020D71E /* WikipediaSearchCell.swift in Sources */,
+				49E22D8F1BEB415900706535 /* RootViewController.swift in Sources */,
 				C890A6581AEBD26B00AFF7E6 /* GitHubSignupViewController.swift in Sources */,
 				B1604CB51BE49F8D002E1279 /* DownloadableImage.swift in Sources */,
 				075F13101B4E9D5A000D7861 /* APIWrappersViewController.swift in Sources */,
@@ -1994,7 +2089,72 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		49E22D841BEB3B1000706535 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49E22D851BEB3B1000706535 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		49E22D711BEB3A9800706535 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/RxExample/tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Krunoslav-Zaher.RxExample-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		49E22D721BEB3A9800706535 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/RxExample/tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Krunoslav-Zaher.RxExample-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		49E22D731BEB3A9800706535 /* Release-Tests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/RxExample/tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Krunoslav-Zaher.RxExample-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = "Release-Tests";
+		};
 		C8297E661B6CF905000589EA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2253,6 +2413,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		49E22D801BEB3A9800706535 /* Build configuration list for PBXNativeTarget "RxExample-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49E22D711BEB3A9800706535 /* Debug */,
+				49E22D721BEB3A9800706535 /* Release */,
+				49E22D731BEB3A9800706535 /* Release-Tests */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C8297E651B6CF905000589EA /* Build configuration list for PBXNativeTarget "RxExample-iOS-no-module" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
