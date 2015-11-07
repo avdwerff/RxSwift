@@ -37,7 +37,7 @@ class SearchTheMovieDBController: UIViewController {
     
     func search() {
         
-        guard let resultsController = storyboard?.instantiateViewControllerWithIdentifier("TMDbSearchResultsViewController") as? TMDbSearchResultsViewController else { fatalError("Unable to instantiate a SearchResultsViewController.") }
+        guard let resultsController = storyboard?.instantiateViewControllerWithIdentifier("TMDbSearchResultsViewController") as? TMDbSearchResultsViewController else { fatalError("Unable to instantiate a TMDbSearchResultsViewController.") }
         
         let searchController = UISearchController(searchResultsController: resultsController)
         searchController.searchResultsUpdater = resultsController

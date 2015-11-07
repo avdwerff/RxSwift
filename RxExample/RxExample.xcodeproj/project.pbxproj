@@ -2421,6 +2421,7 @@
 				49E22D731BEB3A9800706535 /* Release-Tests */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C8297E651B6CF905000589EA /* Build configuration list for PBXNativeTarget "RxExample-iOS-no-module" */ = {
 			isa = XCConfigurationList;
