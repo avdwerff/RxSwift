@@ -18,10 +18,13 @@ class Dependencies {
     let URLSession = NSURLSession.sharedSession()
     let backgroundWorkScheduler: ImmediateSchedulerType
     let mainScheduler: SerialDispatchQueueScheduler
+    #if !os(tvOS)
     let wireframe: Wireframe
-    
+    #endif
     private init() {
+        #if !os(tvOS)
         wireframe = DefaultWireframe()
+        #endif
         
         let operationQueue = NSOperationQueue()
         operationQueue.maxConcurrentOperationCount = 2

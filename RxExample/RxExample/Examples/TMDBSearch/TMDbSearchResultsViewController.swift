@@ -10,24 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+
 class TMDbSearchResultsViewController: UIViewController, UISearchResultsUpdating {
 
     private let disposableBag = DisposeBag()
-    private let api:TMDBAPI = TMDBAPI()
-    private let searchString:Variable<String> = Variable("")
+    
+    let viewModel = SearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        searchString
-            .throttle(0.3, MainScheduler.sharedInstance)
-            .distinctUntilChanged()
-            .map { [unowned self](searchString) -> AnyObject in
-                return self.api.search(searchString)
-            }.subscribeNext { (result) -> Void in
-                print(result
-                )
-            }.addDisposableTo(disposableBag)
+//https://api.themoviedb.org/3/search/multi?query=aa&api_key=f3efc3316ed9e0bb4b4605eaf0750e42
         
     }
     
@@ -35,7 +28,7 @@ class TMDbSearchResultsViewController: UIViewController, UISearchResultsUpdating
     // MARK: UISearchResultsUpdating
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
-        searchString.value = searchController.searchBar.text ?? ""
+        viewModel.searchString.value = searchController.searchBar.text ?? ""
     }
 
 }
