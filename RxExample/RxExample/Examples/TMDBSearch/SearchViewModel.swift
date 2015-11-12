@@ -10,6 +10,20 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+    
+enum MediaType:String {
+    case TV = "tv", Movie = "movie", Person = "person", Unknown = ""
+    var imageKey: String? {
+        get {
+            switch self {
+            case .Person: return "profile_path"
+            case .Unknown: return nil
+            case _: return "poster_path"
+            }
+        }
+    }
+}
+    
 struct TMDBItem {
     let name:String
     let imageUrlString:String?
@@ -64,9 +78,20 @@ class SearchViewModel {
                 return []
             }
             return items.map({ (item) -> TMDBItem in
-                TMDBItem(name: "crap", imageUrlString: "\(config["baseUrl"])/\(config["posterSize"])/qyBDWNMi8xZyabIuPnbmhN8OSyO.jpg")
+                let name = item["name"] as? String ?? "n.a."
+                
+                if
+                    let mediaType = MediaType(rawValue: (item["media_type"] as? String)!),
+                    let type = mediaType.imageKey,
+                    let imagePath = item[type] as? String
+                    {
+                        return TMDBItem(name: name, imageUrlString: "\(config["baseUrl"]!)\(config["posterSize"]!)\(imagePath)")
+                }
+                return TMDBItem(name: name, imageUrlString: nil)
             })
-        }.observeOn($.mainScheduler)
+        }
+        .catchErrorJustReturn([])
+        .observeOn($.mainScheduler)
 
         
     }

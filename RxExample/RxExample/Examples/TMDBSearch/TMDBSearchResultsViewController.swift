@@ -13,7 +13,31 @@ import RxCocoa
 
 class TMDBItemCell: UICollectionViewCell {
     
+    
     @IBOutlet weak var label:UILabel!
+    
+    @IBOutlet var imageView: UIImageView!
+    
+    var disposeBag: DisposeBag!
+    
+    var downloadableImage: Observable<DownloadableImage>?{
+        didSet{
+            let disposeBag = DisposeBag()
+            
+            self.downloadableImage?
+                .asDriver(onErrorJustReturn: DownloadableImage.OfflinePlaceholder)
+                .drive(imageView.rxex_downloadableImageAnimated(kCATransitionFade))
+                .addDisposableTo(disposeBag)
+            
+            self.disposeBag = disposeBag
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+        disposeBag = nil
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,6 +53,7 @@ class TMDBSearchResultsViewController: UIViewController, UISearchResultsUpdating
     typealias TMDBItemSection = SectionModel<String, TMDBItem>
     private let dataSource = RxCollectionViewSectionedReloadDataSource<TMDBItemSection>()
     private var sections = Variable([TMDBItemSection]())
+    private let imageService = DefaultImageService.sharedImageService
     
     @IBOutlet weak var itemView:UICollectionView!
     
@@ -39,8 +64,10 @@ class TMDBSearchResultsViewController: UIViewController, UISearchResultsUpdating
 
         dataSource.cellFactory = { (cv, ip, i) in
             let cell = cv.dequeueReusableCellWithReuseIdentifier("TMDBItemCell", forIndexPath: ip) as! TMDBItemCell
-            
-            
+            cell.label.text = i.name
+            if let imageUrl = i.imageUrlString, let url = NSURL(string: imageUrl) {
+                cell.downloadableImage = self.imageService.imageFromURL(url)
+            }
             return cell
         }
 

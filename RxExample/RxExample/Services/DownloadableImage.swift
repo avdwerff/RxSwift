@@ -10,7 +10,7 @@ import Foundation
 #if !RX_NO_MODULE
 import RxSwift
 #endif
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #elseif os(OSX)
     import Cocoa

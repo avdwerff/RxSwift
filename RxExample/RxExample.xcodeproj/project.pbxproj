@@ -44,6 +44,13 @@
 		49E22D961BEB439B00706535 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81B3A091BC1C28400EF5A9F /* RxCocoa.framework */; };
 		49E22D971BEB439B00706535 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81B3A011BC1C28400EF5A9F /* RxSwift.framework */; };
 		49E22D991BEB470900706535 /* TMDBSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E22D981BEB470900706535 /* TMDBSearchResultsViewController.swift */; };
+		49E53EF21BF4923700EED818 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83367121AD029AE00C668A7 /* ImageService.swift */; };
+		49E53EFF1BF4924000EED818 /* DownloadableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1604CB41BE49F8D002E1279 /* DownloadableImage.swift */; };
+		49E53F001BF4927A00EED818 /* UIImageView+DownloadableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1604CC81BE5BBFA002E1279 /* UIImageView+DownloadableImage.swift */; };
+		49E53F011BF4928C00EED818 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809E97C1BE697100058D948 /* UIImage+Extensions.swift */; };
+		49E53F021BF492BE00EED818 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80397391BD3E17D009D8B26 /* ActivityIndicator.swift */; };
+		49E53F041BF497FA00EED818 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F3BE11BDB2E8F000AAC79 /* ReachabilityService.swift */; };
+		49E53F051BF4985300EED818 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F3BBB1BD92EC8000AAC79 /* Reachability.swift */; };
 		B1604CB51BE49F8D002E1279 /* DownloadableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1604CB41BE49F8D002E1279 /* DownloadableImage.swift */; };
 		B1604CC21BE5B895002E1279 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F3BE11BDB2E8F000AAC79 /* ReachabilityService.swift */; };
 		B1604CC31BE5B8BD002E1279 /* ReachabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18F3BE11BDB2E8F000AAC79 /* ReachabilityService.swift */; };
@@ -1763,21 +1770,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49E53EFF1BF4924000EED818 /* DownloadableImage.swift in Sources */,
 				49D234141BF3FAB10065BB6A /* RxCollectionViewSectionedReloadDataSource.swift in Sources */,
 				49D234161BF3FAB60065BB6A /* RxCollectionViewSectionedAnimatedDataSource.swift in Sources */,
 				49D2341C1BF3FAC60065BB6A /* Differentiator.swift in Sources */,
+				49E53F021BF492BE00EED818 /* ActivityIndicator.swift in Sources */,
 				49D234181BF3FABB0065BB6A /* Changeset.swift in Sources */,
 				49D234051BF3FAA90065BB6A /* RxTableViewSectionedAnimatedDataSource.swift in Sources */,
 				49D234171BF3FAB80065BB6A /* RxDataSourceStarterKit.swift in Sources */,
 				496A648C1BEF43B4008E1A4C /* Dependencies.swift in Sources */,
+				49E53F001BF4927A00EED818 /* UIImageView+DownloadableImage.swift in Sources */,
 				496A648E1BEFE7AE008E1A4C /* Example.swift in Sources */,
 				49D234121BF3FAAB0065BB6A /* RxTableViewSectionedDataSource.swift in Sources */,
+				49E53F051BF4985300EED818 /* Reachability.swift in Sources */,
 				49D234131BF3FAAE0065BB6A /* RxTableViewSectionedReloadDataSource.swift in Sources */,
 				49E22D921BEB422300706535 /* SearchTheMovieDBController.swift in Sources */,
 				496A647B1BEE2DF9008E1A4C /* SearchViewModel.swift in Sources */,
 				49D2341B1BF3FAC30065BB6A /* SectionModel.swift in Sources */,
+				49E53EF21BF4923700EED818 /* ImageService.swift in Sources */,
+				49E53F011BF4928C00EED818 /* UIImage+Extensions.swift in Sources */,
 				49E22D941BEB42FA00706535 /* TMDBAPI.swift in Sources */,
 				49E22D991BEB470900706535 /* TMDBSearchResultsViewController.swift in Sources */,
+				49E53F041BF497FA00EED818 /* ReachabilityService.swift in Sources */,
 				49D234191BF3FABE0065BB6A /* SectionedViewType.swift in Sources */,
 				49D234151BF3FAB30065BB6A /* RxCollectionViewSectionedDataSource.swift in Sources */,
 				49D2341A1BF3FAC10065BB6A /* SectionModelType.swift in Sources */,

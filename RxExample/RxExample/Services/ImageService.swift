@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 #endif
 
-#if os(iOS)
+#if os(iOS) || os(tvOS)
     import UIKit
 #elseif os(OSX)
     import Cocoa
@@ -49,7 +49,7 @@ class DefaultImageService: ImageService {
             .map { data in
                 guard let image = Image(data: data) else {
                     // some error
-                    throw apiError("Decoding image error")
+                    throw NSError(domain: "Image decode error", code: -1, userInfo: nil)
                 }
                 return image.forceLazyImageDecompression()
             }

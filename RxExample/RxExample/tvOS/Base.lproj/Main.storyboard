@@ -93,6 +93,7 @@
                                         </view>
                                         <animations/>
                                         <connections>
+                                            <outlet property="imageView" destination="c0E-Dv-FRb" id="UA7-nB-r0Y"/>
                                             <outlet property="label" destination="fvb-xu-hAs" id="BOc-xG-mth"/>
                                         </connections>
                                     </collectionViewCell>
