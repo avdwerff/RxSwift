@@ -60,7 +60,23 @@ class TMDBAPI {
     
     let $ = Dependencies.sharedDependencies
     
-    func config() -> Observable<AnyObject> {
+    func requestTMDB(path:String, var parameters:[String:String]) -> Observable<AnyObject!> {
+
+        parameters["api_key"] = apiKey
+        
+        let request = urlRequestForPath("\(baseUrlString)/\(path)", parameters:parameters, method: .GET)
+        
+        let session = NSURLSession.sharedSession()
+        
+        return session.rx_JSON(request)
+            .observeOn($.backgroundWorkScheduler)
+            .catchError { error in
+                print("ERROR:: \(error)")
+                return just([:])
+        }
+    }
+    
+    func config() -> Observable<AnyObject!> {
         
         var parameters = [String:AnyObject]()
         parameters["api_key"] = apiKey
@@ -70,10 +86,10 @@ class TMDBAPI {
         let session = NSURLSession.sharedSession()
         
         return session.rx_JSON(request)
-            .map {$0}
+            .observeOn($.backgroundWorkScheduler)
             .catchError { error in
-                print(error)
-                return just([])
+                print("ERROR:: \(error)")
+                return just([:])
         }
         
     }
@@ -87,17 +103,12 @@ class TMDBAPI {
         let request = urlRequestForPath("\(baseUrlString)/search/multi", parameters:parameters, method: .GET)
         
         let session = NSURLSession.sharedSession()
-
+        
         return session.rx_JSON(request)
             .observeOn($.backgroundWorkScheduler)
-            .map { json in
-                print(json)
-                return json
-            }
-            .debug()
             .catchError { error in
                 print("ERROR:: \(error)")
-                return just([])
+                return just([:])
         }
     }
     
