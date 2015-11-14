@@ -33,6 +33,19 @@ class TMDBItemCell: UICollectionViewCell {
         }
     }
     
+    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+        super.didUpdateFocusInContext(context, withAnimationCoordinator: coordinator)
+        
+        layoutIfNeeded()
+        
+        coordinator.addCoordinatedAnimations({
+            self.layer.borderWidth = (context.nextFocusedView == self) ? 2 : 0
+            self.layoutIfNeeded()
+            },
+            completion: nil
+        )
+    }
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.image = nil
@@ -41,12 +54,12 @@ class TMDBItemCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        layer.borderColor = UIColor.greenColor().CGColor
     }
     
 }
 
-class TMDBSearchResultsViewController: UIViewController, UISearchResultsUpdating {
+class TMDBSearchResultsViewController: UIViewController, UISearchResultsUpdating, UICollectionViewDelegateFlowLayout {
 
     private let disposeBag = DisposeBag()
     
@@ -61,7 +74,9 @@ class TMDBSearchResultsViewController: UIViewController, UISearchResultsUpdating
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        itemView.delegate = self
+        
         dataSource.cellFactory = { (cv, ip, i) in
             let cell = cv.dequeueReusableCellWithReuseIdentifier("TMDBItemCell", forIndexPath: ip) as! TMDBItemCell
             cell.label.text = i.name
@@ -85,6 +100,15 @@ class TMDBSearchResultsViewController: UIViewController, UISearchResultsUpdating
     }
     
 
+//    func collectionView(collectionView: UICollectionView, shouldUpdateFocusInContext context: UICollectionViewFocusUpdateContext) -> Bool {
+//        guard let indexPaths = collectionView.indexPathsForSelectedItems() else { return true }
+//        return indexPaths.isEmpty
+//    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(240, 320)
+    }
+    
     // MARK: UISearchResultsUpdating
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
